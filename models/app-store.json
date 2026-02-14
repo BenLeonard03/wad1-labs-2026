@@ -1,0 +1,17 @@
+{
+  "info": {
+    "appTitle": "Playlist Maker",
+    "version": 0.2,
+    "creators": [
+      {
+        "name": "Ben Leonard",
+        "role": "Web Developer"
+      },
+      {
+        "name": "Ben Leonardd",
+        "role": "Web Developer"
+      }
+    ],
+    "location": "Waterford"
+  } 
+}

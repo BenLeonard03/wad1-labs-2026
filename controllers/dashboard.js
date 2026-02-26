@@ -1,6 +1,7 @@
 'use strict';
 
 import logger from "../utils/logger.js";
+import playlistStore from "../models/playlist-store.js";
 
 const dashboard = {
 
@@ -9,9 +10,12 @@ const dashboard = {
    
    const viewData = {
      
-    title: "Playlist App Dashboard"
+    title: "Playlist App Dashboard",
+    playlists: playlistStore.getAllPlaylists()
 
    };
+
+   logger.debug(viewData.playlists);
       
    response.render('dashboard', viewData);
 

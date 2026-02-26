@@ -7,8 +7,6 @@ const about = {
   createView(request, response) {
     logger.info("About page loading!");
 
-    const employeeInfo = employeeList.getAppInfo();
-
     const viewData = {
       title: "About",
       employee: employeeList.getEmpInfo()
@@ -19,3 +17,4 @@ const about = {
 };
 
 export default about;
+ 

@@ -6,7 +6,7 @@ const employeeList = {
   store: new JsonStore("./models/employee-list.json", { employee: {} }),
   collection: "employee",
 
-  getAppInfo() {
+  getEmpInfo() {
     return this.store.findAll(this.collection);
   }
 };

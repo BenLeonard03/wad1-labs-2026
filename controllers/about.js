@@ -11,9 +11,9 @@ const about = {
 
     const viewData = {
       title: "About",
-      employee: employeeInfo
+      employee: employeeList.getEmpInfo()
     };
-
+    logger.info(viewData.employee)
     response.render("about", viewData);
   },
 };

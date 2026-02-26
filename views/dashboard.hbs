@@ -1,23 +1,37 @@
 {{> menu id="dashboard"}}
+{{#each playlists}}
 
 <section class="ui left aligned middle aligned segment">
-  
-    <h2>Playlist App Dashboard</h2>
+  <h3 class="ui header">
 
-    <section class="ui left aligned middle aligned segment">
-       <h3 class="ui header">
-        {{playlists.0.title}}
+    {{title}}
 
-       </h3>
+  </h3>
 
-
-    </section>
-
-    <section class="ui left aligned middle aligned segment">
-      <h3 class="ui header">
-       {{playlists.1.title}}
-
-      </h3>
-    </section>
-      
+  <table class="ui unstackable striped table">
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Artist</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each songs}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{artist}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
 </section>
+  {{/each}}    
+</section>
+
+
+
+

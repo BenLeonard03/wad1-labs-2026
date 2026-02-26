@@ -1,6 +1,8 @@
 'use strict';
 
 import logger from '../utils/logger.js';
+import playlistStore from '../models/playlist-store.js';
+
 
 const playlist = {
   createView(request, response) {

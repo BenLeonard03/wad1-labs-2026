@@ -3,8 +3,9 @@
 import JsonStore from "./json-store.js";
 
 const employeeList = {
-  store: new JsonStore("./models/employee-list.json", { employee: {} }),
-  collection: "employee",
+  // employees should default to an ARRAY, not an object
+  store: new JsonStore("./models/employee-list.json", { employees: [] }),
+  collection: "employees",
 
   getEmpInfo() {
     return this.store.findAll(this.collection);
@@ -12,4 +13,3 @@ const employeeList = {
 };
 
 export default employeeList;
-

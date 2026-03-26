@@ -1,26 +1,24 @@
-{{> menu}}
+{{> menu id="about"}}
 
-<div class="ui centered card">
-  <div class="image">
-    <img src="{{employee.image}}">
+<section class="ui segment">
+  <h2 class="ui header">Development Team</h2>
+
+  <div class="ui three stackable cards">
+    {{#each employees}}
+      <div class="card">
+        <div class="image">
+          <img src="{{image}}" alt="{{fullname}}">
+        </div>
+        <div class="content">
+          <a class="header">{{fullname}}</a>
+          <div class="meta">{{job}}</div>
+          <div class="description">
+            Based in {{city}}, joined in {{joined}}.  
+            Works with {{mates}} teammates.
+          </div>
+        </div>
+      </div>
+    {{/each}}
   </div>
+</section>
 
-  <div class="content">
-    <a class="header">{{employee.fullname}}</a>
-
-    <div class="meta">
-      <span class="date">Joined in {{employee.joined}}</span>
-    </div>
-
-    <div class="description">
-      {{employee.name}} is a {{employee.job}} living in {{employee.city}}.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-      {{employee.mates}} contacts
-    </a>
-  </div>
-</div>

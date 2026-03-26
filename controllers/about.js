@@ -1,7 +1,7 @@
 'use strict';
 
 import logger from "../utils/logger.js";
-import employeeList from "../models/employee-list.js";   // <-- import your model
+import employeeList from "../models/employee-list.js";   // your model
 
 const about = {
   createView(request, response) {
@@ -9,12 +9,12 @@ const about = {
 
     const viewData = {
       title: "About",
-      employee: employeeList.getEmpInfo()
+      employees: employeeList.getEmpInfo()   // <-- now returns an array
     };
-    logger.info(viewData.employee)
+
+    logger.info(viewData.employees);
     response.render("about", viewData);
   },
 };
 
 export default about;
- 

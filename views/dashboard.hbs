@@ -1,37 +1,6 @@
+
 {{> menu id="dashboard"}}
 
-<section class="ui left aligned middle aligned segment">
-  
-  <h2>Playlist App Dashboard</h2>
-  
-  {{#unless playlists}}
-    <h3 class="ui message">
-      Start adding your playlists!
-    </h3>
-  {{/unless}}
-
-  {{#each playlists}}
-    <section class="ui left aligned middle aligned segment">
-
-      <h3 class="ui header">
-        {{title}}
-      </h3>
-
-      {{!-- Exercise 1 + 2: Show total songs OR "Empty Playlist!" --}}
-      {{#if songs.length}}
-        <p>Total songs: {{songs.length}}</p>
-      {{else}}
-        <p><strong>Empty Playlist!</strong></p>
-      {{/if}}
-
-      {{!-- Exercise 3: Replace "View" with Fomantic UI icon --}}
-      <a href="/playlist/{{id}}" class="ui button">
-        <i class="folder open outline icon"></i>
-      </a>
-
-    </section>
-  {{/each}}
-
-</section>
-
+{{> listplaylists}}
+{{> addplaylist}}
 

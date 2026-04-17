@@ -22,4 +22,14 @@ body {
     display: none;
 }
 
+table {
+  margin:auto
+}
+
+
+
+.ui.statistic table td {
+  padding: 4px 10px;
+  font-weight: bold;
+}
 

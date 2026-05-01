@@ -13,6 +13,13 @@
       "email": "marge@simpson.com",
       "password": "secret",
       "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "Ben",
+      "lastName": "Leonard",
+      "email": "benleonard2003@gmail.com",
+      "password": "Leonard2003",
+      "id": "05747993-698a-4a7f-8b08-a6e4dbde6c86"
     }
   ]
 }

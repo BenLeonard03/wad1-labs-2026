@@ -37,15 +37,25 @@ const accounts = {
     };
     response.render('signup', viewData);
   },
-  
- //register function to render the registration page for adding a new user
+
+
   register(request, response) {
-    const user = request.body;
-    user.id = uuidv4();
-    userStore.addUser(user);
-    logger.info('registering' + user.email);
-    response.redirect('/');
-  },
+  const user = request.body;
+
+  // Combine first + last name into a single name field
+  user.name = `${user.firstName} ${user.lastName}`;
+
+  // Add the new user to the store
+  userStore.addUser(user);
+
+  // AUTO-LOGIN: set the login cookie immediately
+  response.cookie("playlist", user.email);
+
+  // Redirect to dashboard
+  response.redirect("/dashboard");
+},
+
+ 
   
   //authenticate function to check user credentials and either render the login page again or the start page.
  authenticate(request, response) {

@@ -10,12 +10,13 @@
   <p>
     The playlist app now contains:
   </p>
+
   {{#with stats}}
   <div class="ui center aligned grid">
 
     <div class="ui sixteen wide column">
-
       <div class="ui centered three statistics">
+
         <div class="ui statistic">
           <div class="value">
             <i class="microphone icon"></i>
@@ -42,6 +43,7 @@
             Average songs per <br> playlist: {{displayAverage}}
           </div>
         </div>
+
       </div>
     </div>
 
@@ -72,10 +74,9 @@
             Average Rating: {{displayAvgRating}}
           </div>
         </div>
-		
+
       </div>
     </div>
-
 
     <div class="ui sixteen wide column">
       <div class="ui centered two statistics">
@@ -99,11 +100,22 @@
       </div>
     </div>
 
+    <!-- ⭐ NEW: Users statistic -->
+    <div class="ui sixteen wide column" style="margin-top: 2em;">
+      <div class="ui centered one statistics">
+        <div class="ui teal statistic">
+          <div class="value">
+            <i class="user icon"></i>
+          </div>
+          <div class="label">
+            {{displayNumUsers}} users
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-    
   </div>
-
   {{/with}}
 
 </section>
+

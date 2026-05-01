@@ -2,6 +2,7 @@
 import logger from "../utils/logger.js";
 import playlistStore from "../models/playlist-store.js";
 import accounts from './accounts.js';
+import userStore  from "../models/user-store.js";
 
 const stats = {
     createView(request, response) {
@@ -12,6 +13,9 @@ const stats = {
 
       // app statistics calculations
       const playlists = playlistStore.getAllPlaylists();
+
+      displayNumUsers: userStore.getAllUsers().length
+
 
       let numPlaylists = playlists.length;
 
